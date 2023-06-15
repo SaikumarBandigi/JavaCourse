@@ -10,7 +10,7 @@ public class Fibonnaci1 {
 
 		int c;
 		System.out.print(a + " " + b);
-		int number = 8;
+		int number = 2;
 
 		for (int i = 2; i <= number; i++) {
 			c = a + b;
