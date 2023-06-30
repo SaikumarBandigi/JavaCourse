@@ -10,13 +10,14 @@ public class FileHandling {
 
 
         FileOutputStream fileOutputStream = new FileOutputStream(file);
+
         DataOutputStream dataOutputStream = new DataOutputStream(fileOutputStream);
 
-       dataOutputStream.writeUTF("sai kumar");
+        dataOutputStream.writeUTF("sai kumar");
 
-/*
-***************************************************
- */
+        /*
+         ***************************************************
+         */
 
 
 //        FileInputStream fileInputStream=new FileInputStream(file);
