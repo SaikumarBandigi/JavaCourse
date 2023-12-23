@@ -29,7 +29,8 @@ Java String literal is created by using double quotes. For Example:
 
 String s="welcome";
 Each time you create a string literal, the JVM checks the "string constant pool" first. If the string already exists in the pool,
-a reference to the pooled instance is returned. If the string doesn't exist in the pool, a new string instance is created and placed in the pool. For example:
+a reference to the pooled instance is returned. If the string doesn't exist in the pool, a new string instance is created and placed in the pool.
+For example:
 
 String s1="Welcome";
 String s2="Welcome";//It doesn't create a new instance
@@ -77,7 +78,7 @@ public class StringInfo {
 
         char ch[] = {'s', 'o', 'n', 'u'};
 
-        String s1="sai";
+        String s1 = "sai";
 
         String s = new String(ch);
         int i = s.length();
@@ -85,6 +86,15 @@ public class StringInfo {
         System.out.println(s);
         System.out.println(i);
 
+//        String s1 = "Hello";
+//        //String s2 = "Hello";
+//        String s3 = new String("Hello");
+//        s3 = s3.intern();
+//
+//        System.out.println(s1 == s3);// true
+/*  we know that the intern() method will return the String Object reference from the string pool.
+ since we assign it back to S2 and now both s1 and s2 are having the same reference. It means that s1 and s2 references point to the same object.
+*/
 
     }
 }

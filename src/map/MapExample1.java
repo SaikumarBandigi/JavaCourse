@@ -1,31 +1,18 @@
 package map;
 
-//Non-generic  
+//Non-generic
+
 import java.util.*;
-import java.util.Map.Entry;
+/*
 
+List -> ArrayList,Linkedlist,Vector
+Set -> HashSet,LinkedHashSet,TreeSet
+Map -> HashMap,LinkedHashMap,TreeMap
+
+ */
 public class MapExample1 {
-	public static void main(String[] args) {
-		Map<Integer, String> map = new HashMap();
-		// Adding elements to map
-		map.put(1, "Amit");
-		map.put(5, "Rahul");
-		map.put(2, "Jai");
-		map.put(6, "Amit");
+    public static void main(String[] args) {
 
-		// Traversing Map
-		Set set = map.entrySet();// Converting to Set so that we can traverse
 
-		System.out.println(set);
-
-		Iterator itr = set.iterator();
-
-		while (itr.hasNext()) {
-			// Converting to Map.Entry so that we can get key and value separately
-			Entry entry = (Entry) itr.next();
-
-			System.out.println(entry.getKey() + " " + entry.getValue());
-		}
-
-	}
+    }
 }

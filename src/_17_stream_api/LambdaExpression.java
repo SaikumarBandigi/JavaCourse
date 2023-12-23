@@ -20,9 +20,8 @@ interface Sai {
 public class LambdaExpression {
     public static void main(String[] args) {
 
-        Sai s = i-> {
-            System.out.println("Prashu");
-        };
-        s.show(10);
+        Sai sai = i -> System.out.println("sai from stream api..");
+        sai.show(10);
+
     }
 }
