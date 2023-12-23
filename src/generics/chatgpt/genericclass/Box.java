@@ -1,26 +1,34 @@
-package generics.chatgpt;
+package generics.chatgpt.genericclass;
 
+// 1. Generic Class:
 
-class Box<T> {
-
+public class Box<T> {
     private T value;
+
+    public void setValue(T value) {
+        this.value = value;
+    }
 
     public T getValue() {
         return value;
     }
 
-    public Box(T value) {
-        this.value = value;
+    public static void main(String[] args) {
+        // Usage
+        Box<Integer> integerBox = new Box<>();
+        integerBox.setValue(42);
+        Integer intValue = integerBox.getValue();
+        System.out.println(intValue);
+
+        Box<String> stringBox = new Box<>();
+        stringBox.setValue("Hello, Generics!");
+        String stringValue = stringBox.getValue();
+        System.out.println(stringValue);
     }
 
-    public static void printBox(Box<?> box) {
-        Object object = box.getValue();
-        System.out.println(object);
-    }
+}
 
-    public static <T> T getElement(T[] array, int index) {
-        return array[index];
-    }
+
 /*
 1. '<T>': This is a type parameter declaration, indicating that the method is generic and can work with any type.
  The <T> is a placeholder for the actual type that will be provided when the method is called.
@@ -40,16 +48,4 @@ The type of the returned element is the same as the type of elements in the arra
 
  */
 
-}
 
-public class BoxExample {
-    public static void main(String[] args) {
-
-        //    Box<?> tBox = new Box<>("Hello, Wildcard!");
-
-        Integer[] arr = {100, 101, 102, 103, 104, 105};
-        Integer integer = Box.getElement(arr, 3);
-        System.out.println(integer);
-
-    }
-}
